@@ -37,3 +37,41 @@ Interestingly, the amount of NTD 9,900 is considered especially auspicious. This
 In the event that the gift amount exceeds 10,000 NTD, it is recommended to minimise the presence of two or more odd digits and to avoid the numbers 4 and 8 whenever possible.
 
 However, regardless of the size of the gift you present, the most crucial aspect lies in the sincerity of your well-wishes for the newlyweds. May your contribution be a token of blessings that accompany them on their journey into marital bliss.
+
+### structure
+
+project
+|-static
+| |- style.css
+|--templates
+| |- calculator.html
+| |- error.html
+| |- index.html
+| |- layout.html
+| |- records.html
+|--app.py
+|--price.db
+|--README.md
+|--requirements.txt
+
+### pages functions
+
+#### style
+
+- majorly bootstrap
+- plain css
+
+#### templates
+
+- index.html: introduce the custom and the basic principles that follow to calculate the cash of red packet
+- calculator.html: first I wrote the main function, and refactor the style at last.
+- error.html: debug for users who forget to choose an option
+- layout.html: layout, most important structure of flask/jinja
+- records.html: history of calculating records
+
+#### files
+
+- app.py: main function, the logic of calculator took me a lot of time to calculate to a reasonable fomula.
+- price.db: db of sqlite
+- README.md: me
+- requirements.txt: for python & flask

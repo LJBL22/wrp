@@ -1,9 +1,5 @@
-{% extends "layout.html" %}
-{% block title %}
-records
-{% endblock %}
-
-{% block main %}
+{% extends "layout.html" %} {% block title %} records {% endblock %} {% block
+main %}
 <div class="section">
   <table class="table table-striped">
     <thead>
@@ -27,7 +23,7 @@ records
         <td>{{ record.venue }}</td>
         <td>{{ record.add_adult }}</td>
         <td>{{ record.add_child }}</td>
-        <td>{{ record.add_money }}</td>
+        <td>{{ record.add_money | ntd }}</td>
         <td>{{ record.total_amount | ntd }}</td>
       </tr>
       {% endfor %}

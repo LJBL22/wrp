@@ -1,159 +1,161 @@
-{% extends "layout.html" %}
-
-{% block title %}
-calculator
-{% endblock %}
-
-{% block main %}
-  <div class="container">
-    <div class="section">
-      <form action="/calculator" method="POST" id="calculation-form">
-        <div class="row g-3 align-items-center">
-          <div class="col-auto">
-            <h4>What's your relationship with the newlyweds?</h4>
-          </div>
-          <div class="col-auto">
-            <select name="relationship" required>
-              <option disabled selected value="relationship">relationship</option>
-              {% for relation in relationship %}
-              <option value="{{ relation.relation }}">
-                {{ relation.relation }}
-              </option>
-              {% endfor %}
-            </select>
-          </div>
+{% extends "layout.html" %} {% block title %} calculator {% endblock %} {% block
+main %}
+<div class="container">
+  <div class="section">
+    <form action="/calculator" method="POST" id="calculation-form">
+      <div class="row g-3 align-items-center p-1">
+        <div class="col-auto">
+          <h4>What's your relationship with the newlyweds?</h4>
         </div>
-        <div class="row g-3 align-items-center">
-          <div class="col-auto">
-            <h4>Will you be present?</h4>
-          </div>
-          <div class="col-auto">
-            <input type="radio" id="yes" name="showup" value="yes" checked />
-          </div>
-          <div class="col-auto">
-            <label for="yes">yes</label>
-          </div>
-          <div class="col-auto">
-            <input type="radio" id="no" name="showup" value="no" />
-          </div>
-          <div class="col-auto">
-            <label for="no">no</label>
-          </div>
+        <div class="col-auto">
+          <select name="relationship" required>
+            <option disabled selected value="relationship">relationship</option>
+            {% for relation in relationship %}
+            <option value="{{ relation.relation }}">
+              {{ relation.relation }}
+            </option>
+            {% endfor %}
+          </select>
         </div>
-        <div class="row g-3 align-items-center">
-          <div class="col-auto">
-            <h4>Where does the wedding ceremony take place?</h4>
-          </div>
-          <div class="col-auto">
-            <select
-              class="form-select"
-              aria-label="Default select example"
-              name="venue"
-              required
-            >
-              <option disabled selected value="venue">venue</option>
-              {% for venue in venues %}
-              <option value="{{ venue.place }}">{{ venue.place }}</option>
-              {% endfor %}
-            </select>
-          </div>
+      </div>
+      <div class="row g-3 align-items-center p-1">
+        <div class="col-auto">
+          <h4>Will you be present?</h4>
         </div>
-        <div class="row g-3 align-items-center">
-          <div class="col-auto">
-            <h4>How many additional guest will you bring?</h4>
-          </div>
-          <div class="col-auto">
-            <label>Adult: </label>
-          </div>
-          <div class="col-auto">
-            <input
-              autocomplete="off"
-              autofocus
-              class="form-control mx-auto w-auto"
-              id="adult"
-              name="adult"
-              placeholder="adult"
-              type="number"
-              value="0"
-              min="0"
-              max="3"
-            />
-          </div>
-          <div class="col-auto">
-            <label>Child: </label>
-          </div>
-          <div class="col-auto">
-            <input
-              autocomplete="off"
-              autofocus
-              class="form-control mx-auto w-auto"
-              id="child"
-              name="child"
-              placeholder="child"
-              type="number"
-              value="0"
-              min="0"
-              max="5"
-            />
-          </div>
+        <div class="col-auto">
+          <input type="radio" id="yes" name="showup" value="yes" checked />
         </div>
-        <div class="row g-3 align-items-center">
-          <div class="col-auto">
-            <h4>Optional add:</h4>
-          </div>
-          <div class="col-auto">
-            <input
-              autocomplete="off"
-              autofocus
-              class="form-control mx-auto w-auto"
-              id="optional"
-              name="optional"
-              placeholder="Add more from 100 (optional)"
-              type="number"
-              value="0"
-              min="0"
-              step="200"
-            />
-          </div>
+        <div class="col-auto">
+          <label for="yes">yes</label>
         </div>
-        <button class="btn btn-primary" type="submit">Calculate</button>
-        <hr>
-        <div id="total">
-          <h1>{{total | ntd}}</h1>
-          <p>* Plase aware that above NT$10,000, even numbers in such as 16,000 is much more welcome than 15,000.</p>
+        <div class="col-auto">
+          <input type="radio" id="no" name="showup" value="no" />
         </div>
-        <hr>
-        <div class="section">
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>relation</th>
-                <th>show</th>
-                <th>venue</th>
-                <th>adult</th>
-                <th>child</th>
-                <th>optional</th>
-                <th>total</th>
-              </tr>
-            </thead>
-            <tbody>
-              {% for record in records %}
-              <tr>
-                <td>{{ record.Timestamp }}</td>
-                <td>{{ record.relation }}</td>
-                <td>{{ record.showup }}</td>
-                <td>{{ record.venue }}</td>
-                <td>{{ record.add_adult }}</td>
-                <td>{{ record.add_child }}</td>
-                <td>{{ record.add_money }}</td>
-                <td>{{ record.total_amount | ntd }}</td>
-              </tr>
-              {% endfor %}
-            </tbody>
-          </table>
+        <div class="col-auto">
+          <label for="no">no</label>
         </div>
-      </form>
-    </div>
+      </div>
+      <div class="row g-3 align-items-center p-1">
+        <div class="col-auto">
+          <h4>Where does the wedding ceremony take place?</h4>
+        </div>
+        <div class="col-auto">
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            name="venue"
+            required
+          >
+            <option disabled selected value="venue">venue</option>
+            {% for venue in venues %}
+            <option value="{{ venue.place }}">{{ venue.place }}</option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+      <div class="row g-3 align-items-center p-1">
+        <div class="col-auto">
+          <h4>How many <strong>additional</strong> guest will you bring?</h4>
+        </div>
+        <div class="col-auto">
+          <label>Adult: </label>
+        </div>
+        <div class="col-auto">
+          <input
+            autocomplete="off"
+            autofocus
+            class="form-control mx-auto w-auto"
+            id="adult"
+            name="adult"
+            placeholder="adult"
+            type="number"
+            value="0"
+            min="0"
+            max="3"
+          />
+        </div>
+        <div class="col-auto">
+          <label>Child: </label>
+        </div>
+        <div class="col-auto">
+          <input
+            autocomplete="off"
+            autofocus
+            class="form-control mx-auto w-auto"
+            id="child"
+            name="child"
+            placeholder="child"
+            type="number"
+            value="0"
+            min="0"
+            max="5"
+          />
+        </div>
+      </div>
+      <div class="row g-3 align-items-center p-1">
+        <div class="col-auto">
+          <h4>Optional add:</h4>
+        </div>
+        <div class="col-auto">
+          <input
+            autocomplete="off"
+            autofocus
+            class="form-control mx-auto w-auto"
+            id="optional"
+            name="optional"
+            placeholder="Add more from 100 (optional)"
+            type="number"
+            value="0"
+            min="0"
+            step="200"
+          />
+          <p class="fst-italic">*Feel free to add more to the amount</p>
+        </div>
+      </div>
+      <div class="align-items-center p-1 m-2">
+        <button class="btn btn-primary btn-lg" type="submit">Calculate</button>
+      </div>
+      <hr />
+      <div id="total" class="p-3">
+        <h1>{{total | ntd}}</h1>
+        <p>
+          * In the event that the gift amount exceeds 10,000 NTD, it is
+          recommended to minimise the presence of two or more odd digits and to
+          avoid the numbers 4 and 8 whenever possible.
+        </p>
+      </div>
+      <hr />
+      <div class="section">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>relation</th>
+              <th>show</th>
+              <th>venue</th>
+              <th>adult</th>
+              <th>child</th>
+              <th>optional</th>
+              <th>total</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for record in records %}
+            <tr>
+              <td>{{ record.Timestamp }}</td>
+              <td>{{ record.relation }}</td>
+              <td>{{ record.showup }}</td>
+              <td>{{ record.venue }}</td>
+              <td>{{ record.add_adult }}</td>
+              <td>{{ record.add_child }}</td>
+              <td>{{ record.add_money | ntd }}</td>
+              <td>{{ record.total_amount | ntd }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </form>
   </div>
-  {% endblock %}
+</div>
+{% endblock %}

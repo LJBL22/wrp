@@ -1,5 +1,5 @@
 from cs50 import SQL
-from flask import Flask, render_template, request
+from flask import Flask, render_template, redirect, request
 
 # Configure application
 app = Flask(__name__)
@@ -25,7 +25,6 @@ db.execute("""
 def index():
     return render_template("index.html")
 
-
 @app.route("/calculator", methods=["GET", "POST"])
 def calculator():
     venues = db.execute("SELECT * FROM venues")
@@ -34,7 +33,6 @@ def calculator():
 
     if request.method == "POST":
         relationship_option = request.form.get("relationship")
-        print(relationship_option)
         if not (relationship_option):
             return render_template("error.html", error_msg = "Please choose a RELATION option")
         showup_option = request.form.get("showup")
@@ -95,9 +93,9 @@ def replace_digit(number):
         return number
 
 ###### DEV ONLY
-original_number = 9000
-modified_number = replace_digit(original_number)
-print(f"{original_number} becomes {modified_number}")
+# original_number = 9000
+# modified_number = replace_digit(original_number)
+# print(f"{original_number} becomes {modified_number}")
 
 @app.route("/records", methods=["GET", "POST"])
 def records():
@@ -109,7 +107,7 @@ def records():
 
 def ntd(value):
     """Format value as NTD."""
-    return f"NTD${value:,}"
+    return f"NTD {value:,}"
 
 # Custom filter
 app.jinja_env.filters["ntd"] = ntd

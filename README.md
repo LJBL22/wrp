@@ -20,13 +20,15 @@
 - To assist users in calculating the appropriate amount for a red packet, taking into account various factors.
 - Review the checking records.
 
-### Background:
+### Idea Background:
 
 #### Taiwanese Wedding Red Packet Etiquette
 
-For guests attending weddings, the customary red envelope gift typically starts at 600 NTD. When estimating a total gift amount of less than 10,000 NTD, it is advisable to steer clear of the numbers 4 and 8. This caution stems from cultural nuances, where the number 4 is associated with the word for "death," and the number 8, while considered “wealth” in many contexts, sounds similar to the word for "separation." Thus, it may not be deemed suitable for inclusion in wedding gift amounts. Additionally, one should avoid having an odd digit or the digit 0 in the hundreds place.
+A red packet or a red envelope is a monetary gift given during holidays or for special occasions such as a wedding. ---[Wikipedia](https://en.wikipedia.org/wiki/Red_envelope)
 
-Interestingly, the amount of 9,900 NTD is considered especially auspicious. This is due to its homophonic sound "長長久久" in Chinese, symbolising a heartfelt wish for enduring marital happiness.
+In Taiwan, for guests attending weddings, the customary red envelope gift typically starts at NTD 600. When estimating a total gift amount of less than 10,000 NTD, it is advisable to steer clear of the numbers 4 and 8. This caution stems from cultural nuances, where the number 4 is associated with the word for "death," and the number 8, while considered “wealth” in many contexts, sounds similar to the word for "separation." Thus, it may not be deemed suitable for inclusion in wedding gift amounts. Additionally, one should avoid having an odd digit, which related to funerals, or the digit 0 in the hundreds place, following established conventions.
+
+Interestingly, the amount of NTD 9,900 is considered especially auspicious. This is due to its homophonic sound "jiu-jiu" in Mandarin, symbolising a heartfelt wish for enduring marital happiness.
 
 In the event that the gift amount exceeds 10,000 NTD, it is recommended to minimise the presence of two or more odd digits and to avoid the numbers 4 and 8 whenever possible.
 

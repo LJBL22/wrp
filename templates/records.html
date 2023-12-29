@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block title %}
+records
+{% endblock %}
+
+{% block main %}
+<div class="section">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>relation</th>
+        <th>show</th>
+        <th>venue</th>
+        <th>adult</th>
+        <th>child</th>
+        <th>optional</th>
+        <th>total</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for record in records %}
+      <tr>
+        <td>{{ record.Timestamp }}</td>
+        <td>{{ record.relation }}</td>
+        <td>{{ record.showup }}</td>
+        <td>{{ record.venue }}</td>
+        <td>{{ record.add_adult }}</td>
+        <td>{{ record.add_child }}</td>
+        <td>{{ record.add_money }}</td>
+        <td>{{ record.total_amount | ntd }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock%}

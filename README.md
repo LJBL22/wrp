@@ -1,4 +1,8 @@
-# 🧧 Wedding Red Packet Calculator 🧧
+# 🧧 Taiwanese Wedding Red Packet Calculator 🧧
+
+#### Video Demo: Youtube [URL](https://youtu.be/-ShM5qkQY1Y?si=Beq2SDdATjHn6m0G)
+
+#### Description:
 
 ### How to demo
 

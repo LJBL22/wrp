@@ -6,6 +6,8 @@
 
 .article-title {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .article-title img {
@@ -18,7 +20,7 @@
   opacity: 0.5;
 }
 
-.article-title {
+.article-title p {
   color: red;
   font-size: 3rem;
   font-family: 'Roboto Slab', serif;

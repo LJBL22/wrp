@@ -1,11 +1,14 @@
-# 🧧 Taiwanese Wedding Red Packet Calculator 🧧 | [DEMO SITE](https://wrp-self.vercel.app/)
+# 🧧 Taiwanese Wedding Red Packet Calculator 🧧
 
 #### Video for Demo: Youtube [URL](https://youtu.be/-ShM5qkQY1Y?si=Beq2SDdATjHn6m0G)
 
 #### Description:
 
-### How to demo
+### How to demo 
+#### - [DEMO SITE](https://wrp-self.vercel.app/) supported by vercel
+* NOTICE: this link is only for static demo, if you need to execute the db, you need to download locally due to VERCEL is a serverless service which does not support SQLite.
 
+#### - Before deploy to vercel
 1. Download this repo.
 2. Create a Flask Python environment in the directory using your IDE. For Visual Studio Code, you can follow [this instructions](https://code.visualstudio.com/docs/python/tutorial-flask).
 3. If the process did not execute automatically, you may need to install the required dependencies (see requirements.txt).
@@ -40,19 +43,23 @@ However, regardless of the size of the gift you present, the most crucial aspect
 
 ### structure
 
-project
-|-static
-| |- style.css
-|--templates
-| |- calculator.html
-| |- error.html
-| |- index.html
-| |- layout.html
-| |- records.html
-|--app.py
-|--price.db
-|--README.md
-|--requirements.txt
+```bash
+.
+├── Pipfile
+├── README.md
+├── app.py
+├── price.db
+├── requirements.txt
+├── static
+│   └── style.css
+├── templates
+│   ├── calculator.html
+│   ├── error.html
+│   ├── index.html
+│   ├── layout.html
+│   └── records.html
+└── vercel.json
+```
 
 ### pages functions
 

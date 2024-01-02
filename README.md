@@ -1,6 +1,6 @@
-# 🧧 Taiwanese Wedding Red Packet Calculator 🧧
+# 🧧 Taiwanese Wedding Red Packet Calculator 🧧 | [DEMO SITE](https://wrp-self.vercel.app/)
 
-#### Video Demo: Youtube [URL](https://youtu.be/-ShM5qkQY1Y?si=Beq2SDdATjHn6m0G)
+#### Video for Demo: Youtube [URL](https://youtu.be/-ShM5qkQY1Y?si=Beq2SDdATjHn6m0G)
 
 #### Description:
 
